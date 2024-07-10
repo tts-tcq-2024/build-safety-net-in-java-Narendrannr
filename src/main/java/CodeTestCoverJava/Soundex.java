@@ -26,23 +26,17 @@ public class Soundex {
         return soundex.toString();
     }
 
+    private static final char[] MAP = {
+    /** Keeping the data primitive 
+        A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z */
+       '0','1','2','3','0','1','2','0','0','2','2','4','5','5','0','1','2','6','2','3','0','1','0','2','0','2'
+    };
+
     private static char getSoundexCode(char c) {
-        c = Character.toUpperCase(c);
-        switch (c) {
-            case 'B': case 'F': case 'P': case 'V':
-                return '1';
-            case 'C': case 'G': case 'J': case 'K': case 'Q': case 'S': case 'X': case 'Z':
-                return '2';
-            case 'D': case 'T':
-                return '3';
-            case 'L':
-                return '4';
-            case 'M': case 'N':
-                return '5';
-            case 'R':
-                return '6';
-            default:
-                return '0'; // For A, E, I, O, U, H, W, Y
-        }
+            c = Character.toUpperCase(c);
+            if (c >= 'A' && c <= 'Z') {
+                return MAP[c - 'A'];
+            }
+            return '0';
     }
 }
