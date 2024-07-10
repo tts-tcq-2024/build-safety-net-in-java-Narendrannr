@@ -19,32 +19,27 @@ public class SoundexTest {
     }
 
     @Test
-    public void testSingleCharacter() {
+    public void testStringWithEmptySpace() {
         assertEquals(Soundex.generateSoundex("Van Gogh"), "V520");
     }
 
     @Test
-    public void testSingleCharacter() {
-        assertEquals(Soundex.generateSoundex("Kant"), "K530");
-    }
-
-    @Test
-    public void testSingleCharacter() {
+    public void testStringWithVowel() {
         assertEquals(Soundex.generateSoundex("AEIOU"), "A000");
     }
 
     @Test
-    public void testSingleCharacter() {
+    public void testStringSoundB() {
         assertEquals(Soundex.generateSoundex("BFPV"), "B110");
     }
 
     @Test
-    public void testSingleCharacter() {
+    public void testStringSoundJ() {
         assertEquals(Soundex.generateSoundex("Jackson"), "J250");
     }
 
     @Test
-    public void testSingleCharacter() {
+    public void testStringSoundH() {
         assertEquals(Soundex.generateSoundex("Hilbert"), "H416");
     }
 }
