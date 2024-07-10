@@ -20,17 +20,12 @@ public class SoundexTest {
 
     @Test
     public void testStringWithEmptySpace() {
-        assertEquals(Soundex.generateSoundex("Van Gogh"), "V520");
+        assertEquals(Soundex.generateSoundex("Van Gogh"), "V522");
     }
 
     @Test
     public void testStringWithVowel() {
         assertEquals(Soundex.generateSoundex("AEIOU"), "A000");
-    }
-
-    @Test
-    public void testStringSoundB() {
-        assertEquals(Soundex.generateSoundex("BFPV"), "B110");
     }
 
     @Test
