@@ -15,7 +15,7 @@ public class Soundex {
         return appendZeroEnd(soundex).toString();
     }
 
-    protected static StringBuilder appendZeroEnd(StringBuilder soundex) {
+    private static StringBuilder appendZeroEnd(StringBuilder soundex) {
         while (soundex.length() < 4) {
             soundex.append('0');
         }
@@ -34,7 +34,7 @@ public class Soundex {
         }
     }
 
-    protected static void appendCode(char currentCode, char prevCode, StringBuilder soundex) {
+    private static void appendCode(char currentCode, char prevCode, StringBuilder soundex) {
         if (currentCode != '0' && currentCode != prevCode) {
             soundex.append(currentCode);
         }
