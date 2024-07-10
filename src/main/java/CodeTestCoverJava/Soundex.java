@@ -1,6 +1,7 @@
 package CodeTestCoverJava;
 
 public class Soundex {
+    static StringBuilder soundex = new StringBuilder();
 
     public static String generateSoundex(String name) {
         if (name == null || name.isEmpty()) {
