@@ -34,7 +34,11 @@ public class Soundex {
         }
     }
 
-
+    protected static void appendCode(char currentCode, char prevCode, StringBuilder soundex) {
+        if (currentCode != '0' && currentCode != prevCode) {
+            soundex.append(currentCode);
+        }
+    }
 
     private static final char[] MAP = {
         /** Keeping the data primitive 
